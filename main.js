@@ -27,7 +27,13 @@ function undo(){
 function clear_calc(){
   document.getElementById('input_1').value = null;
   document.getElementById('input_2').value = null;
-  document.getElementById('output').innerHTML = [];
+  // document.getElementById('output').innerHTML = [];
+}
+
+function memoryAdd(){
+  var new_input_1 = document.getElementById('output').innerHTML
+  document.getElementById('input_1').value = new_input_1;
+  document.getElementById('input_2').value = null;
 }
 
 function add(){
