@@ -1,6 +1,6 @@
 function lastAnswer(){
   var element = document.getElementById('output');
-  if (element.innterHTML == '') {
+  if (element.innerHTML == '') {
     return '';
   } else {
     return parseFloat(element.innerHTML);
@@ -17,6 +17,17 @@ function setOutput(sum){
   var lastOutput = lastAnswer();
   document.getElementById('output').innerHTML = sum;
   document.getElementById('last_answer').innerHTML = lastOutput;
+}
+
+function undo(){
+  var targetOutput = parseFloat(document.getElementById('last_answer').innerHTML);
+  document.getElementById('output').innerHTML = targetOutput;
+}
+
+function clear_calc(){
+  document.getElementById('input_1').value = null;
+  document.getElementById('input_2').value = null;
+  document.getElementById('output').innerHTML = [];
 }
 
 function add(){
