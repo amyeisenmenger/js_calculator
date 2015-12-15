@@ -22,12 +22,19 @@ Make a slot machine with javascript -->
     <label> = </label>
     <label id='output'></label>
     <br/>
+    <br/>
     <button onclick="memoryAdd()">Reuse Current Answer</button>
+    <br/>
     <br/>
     <label>Your last Answer:</label>
     <label id='last_answer'></label>
     <br />
+    <br />
     <button onclick='undo()'>Undo Calculation</button>
-    <button onclick='clear_calc()'>Clear Equation</button>
+    <button onclick='clearCalc()'>Clear Equation</button>
+    <button onclick='calcHistory()'>Show Calculation History</button>
+    <button onclick="clearHistory()">Clear Calculation History</button>
+    <br />
+    <label id='calc_history'></label>
   </body>
 </html>
